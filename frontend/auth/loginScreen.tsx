@@ -26,7 +26,7 @@ export function LoginScreen() {
       headers: { Authorization: `Bearer ${accessToken}` },
     });
     const data = await res.json();
-    console.log(data);
+    // todo save user in context
   }
 
   function handlePress() {

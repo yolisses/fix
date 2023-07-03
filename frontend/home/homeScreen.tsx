@@ -15,7 +15,6 @@ export function HomeScreen() {
 
   async function getPosts() {
     const res = await api.get("/posts");
-    console.log(res.status);
     setPosts(res.data);
   }
 
