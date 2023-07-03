@@ -1,8 +1,8 @@
-import { Link } from "expo-router";
 import { useEffect, useState } from "react";
-import { FlatList, View } from "react-native";
+import { FlatList, SafeAreaView, View } from "react-native";
 import "../api";
 import { api } from "../api";
+import { Header } from "./header";
 import { PostItem } from "./postItem";
 
 export function HomeScreen() {
@@ -18,14 +18,14 @@ export function HomeScreen() {
   }
 
   return (
-    <View style={{ gap: 10 }}>
-      <Link href="/map">Mapa</Link>
+    <SafeAreaView style={{ gap: 10 }}>
+      <Header></Header>
       <FlatList
         data={posts}
         renderItem={({ item }) => (
           <PostItem post={item} key={item.id}></PostItem>
         )}
       ></FlatList>
-    </View>
+    </SafeAreaView>
   );
 }
