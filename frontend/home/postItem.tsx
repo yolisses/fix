@@ -1,6 +1,5 @@
 import { Link } from "expo-router";
 import { Image, Text, View } from "react-native";
-import { Post } from "../types";
 
 type Props = {
   post: Post;

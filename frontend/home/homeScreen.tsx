@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { FlatList, View } from "react-native";
 import "../api";
 import { api } from "../api";
-import { Post } from "../types";
 import { PostItem } from "./postItem";
 
 export function HomeScreen() {
