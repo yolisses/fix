@@ -1,3 +1,3 @@
-import { WelcomeScreen } from "../auth/welcomeScreen";
+import { HomeScreen } from "../home/homeScreen";
 
-export default WelcomeScreen;
+export default HomeScreen;
