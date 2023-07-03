@@ -1,3 +1,4 @@
+import { Link } from "expo-router";
 import { Image, Text, View } from "react-native";
 import { Post } from "../types";
 
@@ -14,7 +15,16 @@ export function PostItem({ post }: Props) {
           uri: `https://picsum.photos/seed/${post.id}/1080/720`,
         }}
       />
-      <Text style={{ fontSize: 20 }}>{post.title}</Text>
+      <Link href={`/posts/${post.id}`} style={{}}>
+        <Text
+          style={{
+            fontSize: 20,
+            fontWeight: "500",
+          }}
+        >
+          {post.title}
+        </Text>
+      </Link>
     </View>
   );
 }

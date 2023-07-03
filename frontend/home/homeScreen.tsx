@@ -1,6 +1,6 @@
 import { Link } from "expo-router";
 import { useEffect, useState } from "react";
-import { FlatList, Text, View } from "react-native";
+import { FlatList, View } from "react-native";
 import "../api";
 import { api } from "../api";
 import { Post } from "../types";
@@ -19,8 +19,7 @@ export function HomeScreen() {
   }
 
   return (
-    <View>
-      <Text style={{ fontSize: 40 }}>welcome</Text>
+    <View style={{ gap: 10 }}>
       <Link href="/map">Mapa</Link>
       <FlatList
         data={posts}
